@@ -63,9 +63,9 @@
         var q=document.getElementById("desc").value;
         let list=document.createElement("div");
         list.innerHTML="";
+        var x=q.replaceAll(" ","");
         list.setAttribute("id",x);
         list.classList='list '.concat(x);
-        var x=q.replaceAll(" ","");
         const live=`<div class="fun">
         <div class="title">${x}</div>
         <span class="close ${x} runn">X</span></div>
