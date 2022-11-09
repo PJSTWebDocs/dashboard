@@ -1,0 +1,112 @@
+*{
+    margin: 0%;
+    top: 0px;
+}
+.list{
+    width:300px;
+    /*border: red solid 2px;*/
+}
+#main{
+    display: flex;
+    flex-direction: row;
+}
+#hip{
+    display: flex;
+    flex-direction: row;
+}
+#top{
+    width: 100%;
+    height: 50px;
+    /*border: 2px red solid;*/
+    font-size: 30px;
+    background-color:rgb(169, 175, 179);
+    
+}
+#top span{
+    position: relative;
+    top: 7px;
+    left: 10px;
+}
+#hip{
+    margin-top: 3px;
+}
+button{
+    font-size: 15px;
+    width: 80px;
+    height: 30px;
+    border-radius: 10%;
+    color: white;
+    background-color: rgb(129, 126, 126);
+}
+#entry2, .entry{
+    font-size: 12px;
+    width: 50px;
+    height: 20px;
+    border-radius: 10%;
+    color: white;
+    background-color: rgb(126, 122, 122);
+}
+.list{
+    height: max-content;
+}
+#title{
+    font-size: 30px;
+}
+input[type=text]{
+    width: 250px;
+    height: 20px;
+    border-radius: 5%;
+}
+.list{
+    background-color: rgb(186, 223, 206);
+}
+/* .close{
+    position: relative;
+    margin-right:20px;
+} */
+.title{
+    margin-top: 10px;
+    font-size: 30px;
+    width: 270px;
+    margin-left: 10px;
+    /* border: 2px red solid; */
+}
+.runn{
+    position: relative;
+    margin-top: 15px;
+}
+.fun{
+    display: flex;
+    flex-direction: row;
+}
+.close{
+    cursor: pointer;
+}
+.list{
+    border-radius: 5%;
+    margin-right: 10px;
+    padding-bottom: 10px;
+}
+.card{
+    width: 250px;
+    height: max-content;
+    background-color: rgb(250, 250, 250);
+    margin-left: 20px;
+    margin-top: 5px;
+    border-radius: 5%;
+    padding-left: 4px;
+    padding-bottom: 5px;
+}
+.data1{
+    margin-left: 4px;
+}
+.king{
+    display: flex;
+    flex-direction: row;
+}
+.tent{
+    font-size: 30px;
+    color: tomato;
+    width: 220px;
+    border: 2ps red solid;
+}

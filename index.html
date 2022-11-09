@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="style.css" rel="stylesheet"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="top"><span>Dashboard</span></div>
+    <div id="hip">
+    <div id="main">
+</div>
+<div>
+    <div id="data2" class=".data2">
+        <input type="text" placeholder="Enter your list name..." id="desc" required><br>
+        <input type="button" id="entry2" value="Add" onclick="enter2()">
+    </div>
+    <button  id="new_list" onclick="show2()">Add list</button>
+</div>
+</div>
+    <script type="text/javascript">
+    $("#data2").hide();
+    $("#data1").hide();
+    var a;
+    var b;
+    var can=document.getElementById("main");  
+   function enter(){
+    var ty=$("#".concat(help)).children();
+    console.log(ty);
+    var y=ty[3];
+    //console.log("hiii");
+    console.log(y);
+    //$("#".concat(y.id)).hide();
+    var hy=$("#".concat(y.id)).children();
+    console.log(hy);
+    a=hy[0].value;
+    b=hy[2].value;
+    const d = new Date();
+    let hour = d.getHours();
+    let minutes = d.getMinutes();
+    var q=a.replaceAll(" ","");
+        let card=document.createElement("div");
+        card.innerHTML="";
+        card.setAttribute("id",q);
+        card.classList='card';
+        const movie=`<div class="king"><div class="${q} tent">${a}</div><span class="close ${q} cards">x</span></div>
+        <span>${b}</span><br>
+        <div class="time">Created at : ${hour}:${minutes}</div>
+        `;
+
+        var main=document.getElementById(help);
+        card.innerHTML+=movie;
+        main.append(card);
+        hy[0].value="";
+        hy[2].value="";
+
+   }
+    function enter2(){
+        var q=document.getElementById("desc").value;
+        let list=document.createElement("div");
+        list.innerHTML="";
+        list.setAttribute("id",x);
+        list.classList='list '.concat(x);
+        var x=q.replaceAll(" ","");
+        const live=`<div class="fun">
+        <div class="title">${x}</div>
+        <span class="close ${x} runn">X</span></div>
+        <br><br>
+        <div id="r${x}" class="data1">
+        <input type="text" placeholder="Enter Title of the card" id="Name" class="Name" required><br>
+        <input type="text" placeholder="Description" id="age" class="age" required>
+        <input type="button" class="entry" value="Add">
+        </div>
+        <button id="b${x}" class="kin r${x}">Add card</button>`;
+        list.innerHTML=live;
+        can.append(list);
+        $(".data1").hide();
+        $(".data2").hide();
+        document.getElementById("desc").value="";
+    }
+    $(document).on("click", ".close" , function() {
+        var zx=this.className;
+        var tru=zx.split(" ");
+        $("#".concat(tru[1])).remove();
+ });
+
+     $(document).on("click", ".kin" , function() {
+        $(".data1").hide();
+        var zx=this.className;
+        console.log("tharun");
+        console.log(zx);
+        var tru=zx.split(" ");
+        var k=$(".".concat(tru[1])).prev().attr("id");
+        $("#".concat(k)).show();
+ });
+$(document).on("input", ".Name" , function() {
+   
+    var getClass = this.className;
+    var x=$(".".concat(getClass)).parentsUntil("#main");
+    window.help=x[1].id;
+    //console.log("king");
+    console.log(help); 
+});
+$(document).on("click", ".entry" , function() {
+   var getClass = this.className;
+   var x=$(".".concat(getClass)).parentsUntil("#main");
+   console.log(help);
+   enter();
+   $(".data1").hide();  
+});
+    function show2(){
+        $("#data2").show();
+    }
+    </script>
+</body>
+</html>
